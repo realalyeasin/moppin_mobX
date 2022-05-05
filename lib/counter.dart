@@ -5,10 +5,11 @@ class CounterStore = Counter with _$CounterStore;
 
 abstract class Counter with Store{
   @observable
-  int counter = 45;
+  double counter = 45;
 
   @action
   void decrement(){
-    counter-=5;
+    counter-=.5;
   }
 }
+

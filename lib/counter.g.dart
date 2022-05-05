@@ -12,13 +12,13 @@ mixin _$CounterStore on Counter, Store {
   late final _$counterAtom = Atom(name: 'Counter.counter', context: context);
 
   @override
-  int get counter {
+  double get counter {
     _$counterAtom.reportRead();
     return super.counter;
   }
 
   @override
-  set counter(int value) {
+  set counter(double value) {
     _$counterAtom.reportWrite(value, super.counter, () {
       super.counter = value;
     });
